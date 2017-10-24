@@ -1,8 +1,13 @@
-import React, { Component } from "react";
-export default class App extends Component {
+import React from "react";
+import NavBar from './navbar.jsx';
+
+export default class App extends React.Component {
     render() {
         return (
-            <div>{this.props.children}</div>
+            <div>
+                <NavBar />
+                <div>{this.props.children}</div>
+            </div>
         );
     }
 }
