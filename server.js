@@ -13,6 +13,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: config.output.publicPath
 }));
 app.use(require('webpack-hot-middleware')(compiler));
+// Route API accesses through the API module
 app.use('/api', require('./src/server/api'));
 app.use('/public', express.static('public'));
 app.get('*', function(req, res) {
